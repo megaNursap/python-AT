@@ -25,4 +25,3 @@ install-playwright:
 	@echo "🔹 Installing Playwright..."
 	$(PYTHON) -m playwright install
 	$(PYTHON) -m playwright install-deps
-
