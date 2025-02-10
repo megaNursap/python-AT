@@ -1,0 +1,28 @@
+# Define the default Python interpreter
+PYTHON := python3
+
+# Install Python dependencies from requirements.txt
+install: install-requirements install-allure install-playwright
+
+install-requirements:
+	@echo "🔹 Installing Python dependencies..."
+	$(PYTHON) -m pip install --upgrade pip
+	$(PYTHON) -m pip install -r requirements.txt
+
+install-allure:
+	@echo "🔹 Installing Allure CLI..."
+	@if [ "$(shell uname)" = "Darwin" ]; then \
+		brew install allure; \
+	elif [ "$(shell uname)" = "Linux" ]; then \
+		sudo snap install allure; \
+	elif [ "$(shell uname -o)" = "Msys" ]; then \
+		scoop install allure; \
+	else \
+		echo "Unsupported OS! Just install Allure manually."; \
+	fi
+
+install-playwright:
+	@echo "🔹 Installing Playwright..."
+	$(PYTHON) -m playwright install
+	$(PYTHON) -m playwright install-deps
+
