@@ -8,3 +8,13 @@ class Config:
     # WebDriver settings
     BROWSER = "chrome"
     HEADLESS = True
+
+    # Timeout settings
+    SHORT_WAIT = 3
+    MEDIUM_WAIT = 5
+    LONG_WAIT = 10
+
+    # HTTP Status Codes
+    STATUS_OK = 200
+    STATUS_CREATED = 201
+    STATUS_NOT_FOUND = 404
