@@ -1,13 +1,14 @@
 class Config:
     BASE_URL = "https://www.saucedemo.com"
-    API_URL = "https://jsonplaceholder.typicode.com/"
+    HOME_URL = "https://magento.softwaretestingboard.com/"
+    API_URL = "https://jsonplaceholder.typicode.com"
     USERNAME = "testuser"
     PASSWORD = "password123"
     MOBILE_APP_PATH = "/path/to/app.apk"
 
     # WebDriver settings
     BROWSER = "chrome"
-    HEADLESS = True
+    HEADLESS = False
 
     # Timeout settings
     SHORT_WAIT = 3

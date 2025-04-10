@@ -1,3 +1,6 @@
+#cd /Users/glintsmac/Documents/Workspace/python-AT
+#make install
+
 # Define the default Python interpreter
 PYTHON := python3
 
