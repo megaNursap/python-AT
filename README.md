@@ -10,7 +10,7 @@ My AT Repo
 1. pytest tests/api/users/get_users.py --alluredir=allure-results
 
 # How to Run ALl
-1. pytest tests/web
+1. pytest tests/web --alluredir=allure-results
 
 # How to see the Result
 1. allure serve allure-results
