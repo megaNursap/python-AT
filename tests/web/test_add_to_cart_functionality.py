@@ -23,17 +23,17 @@ def test_add_to_cart(browser):
     results_page = SearchResultsPage(page)
     results_page.click_first_product()
 
-    # product_page = ProductPage(page)
-    # product_page.select_size()
-    # product_page.select_color()
-    # product_page.add_to_cart()
+    product_page = ProductPage(page)
+    product_page.select_size()
+    product_page.select_color()
+    product_page.add_to_cart()
 
-    # assert product_page.get_success_message() is True
+    assert product_page.get_success_message() is True
 
-    # product_page.go_to_cart()
+    product_page.go_to_cart()
 
-    # cart_page = CartPage(page)
-    # assert cart_page.verify_selected_size_color()
+    cart_page = CartPage(page)
+    assert cart_page.verify_selected_size_color()
     
-    # cart_page.update_quantity(2)
-    # assert cart_page.verify_subtotal_updated(2)
+    cart_page.update_quantity(2)
+    assert cart_page.verify_subtotal_updated(2)
